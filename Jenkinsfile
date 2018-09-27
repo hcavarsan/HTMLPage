@@ -24,6 +24,7 @@ pipeline {
             steps {
                 sh """
                     sudo docker push hcavarsan/nginx-exemplo:${BUILD_NUMBER}
+                    sudo docker push hcavarsan/nginx-exemplo:latest
                 """
             }
         }
@@ -38,3 +39,4 @@ pipeline {
         }
         }
 }
+
