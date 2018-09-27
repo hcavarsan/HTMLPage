@@ -7,7 +7,7 @@ pipeline {
         stages {
         stage('checkout') {
             steps {
-                git branch: branch, credentialsId: 'e40e2851-a8ec-4cdd-a9e5-12e4853d4208', url: 'https://github.com/hcavarsan/HTMLPage.git'
+                sh "" sudo docker build -t nginx-exemplo . ""
             }
         }
         }
