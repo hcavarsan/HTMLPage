@@ -11,6 +11,7 @@ pipeline {
                     sudo docker build -t nginx-exemplo:${BUILD_NUMBER} .
                 """
             }
+            }
         }
         stage('Tag Image') {
             steps {
@@ -19,7 +20,6 @@ pipeline {
                 """
             }
         }
-
         stage('Tag Image') {
             steps {
                 sh """
@@ -28,4 +28,3 @@ pipeline {
             }
         }
         }
-}
