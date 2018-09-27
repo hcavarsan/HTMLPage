@@ -12,7 +12,6 @@ pipeline {
                 """
             }
             }
-        }
         stage('Tag Image') {
             steps {
                 sh """
@@ -28,4 +27,4 @@ pipeline {
             }
         }
         }
-
+}
