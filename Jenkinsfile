@@ -5,9 +5,11 @@ pipeline {
         version = "${BUILD_NUMBER}"
     }
         stages {
-        stage('checkout') {
+        stage('sonar analysis') {
             steps {
-                sh "" sudo docker build -t nginx-exemplo . ""
+                sh """
+                    sudo docker build -t nginx-exemplo .
+                """
             }
         }
         }
