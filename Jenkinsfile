@@ -12,5 +12,20 @@ pipeline {
                 """
             }
         }
+        stage('Tag Image') {
+            steps {
+                sh """
+                    sudo docker tag nginx-exemplo hcavarsan/nginx-exemplo:${BUILD_NUMBER}
+                """
+            }
+        }
+
+        stage('Tag Image') {
+            steps {
+                sh """
+                    sudo docker push hcavarsan/nginx-exemplo:${BUILD_NUMBER}
+                """
+            }
+        }
         }
 }
