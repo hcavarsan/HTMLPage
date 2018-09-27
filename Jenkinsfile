@@ -15,7 +15,7 @@ pipeline {
         stage('Tag Image') {
             steps {
                 sh """
-                    sudo docker tag nginx-exemplo hcavarsan/nginx-exemplo:${BUILD_NUMBER}
+                    sudo docker tag nginx-exemplo:${BUILD_NUMBER} hcavarsan/nginx-exemplo:${BUILD_NUMBER}
                 """
             }
         }
